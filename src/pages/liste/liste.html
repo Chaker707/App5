@@ -1,0 +1,22 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Liste des Etudiants</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+<h3>Liste des etudiants</h3>
+  <ion-list >
+    <ion-item *ngFor="let etd of etudiants1">     
+      <ion-icon name="contacts" item-start></ion-icon> 
+      <h2>{{ etd.nom }} {{ etd.prenom }}</h2>
+      <h3>{{ etd.groupe }} </h3>    
+      <button ion-button clear item-end (click)="deleteData(etd.prenom)">Supprimer</button>     
+    </ion-item>
+  </ion-list>
+</ion-content>
